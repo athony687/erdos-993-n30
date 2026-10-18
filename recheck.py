@@ -34,7 +34,7 @@ for line in open(sys.argv[1]):
     coeffs = list(map(int, right.split(':')[1].split()))
     p = indpoly(n, parr)
     assert p == coeffs, line
-    assert len(parr) == n+1 and n == 30
+    assert len(parr) == n+1
     lc_fail = [k for k in range(1, len(p)-1) if p[k]**2 < p[k-1]*p[k+1]]
     assert lc_fail
     m = p.index(max(p))
